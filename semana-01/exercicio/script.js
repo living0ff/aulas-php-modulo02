@@ -22,7 +22,11 @@ function validar() {
     } if (!filtrotel.test(obj.telefone)) {
         alert('Digite um telefone válido.');
         return false;
-    } if (obj.infousuario.length < 10) {
+    } if (obj.tipocontato < 1 || obj.tipocontato > 4) {
+        alert('Informe um tipo de contato válido.');
+        return false;
+    }
+    if (obj.infousuario.length < 10) {
         alert('Digite uma mensagem de ao menos 10 caracteres.')
         return false
     }
